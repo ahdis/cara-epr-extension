@@ -78,7 +78,7 @@ Wichtig: cara-transfer ist ein unabhängiges Werkzeug der ahdis ag. Es wird nich
 ## Distribution tab
 
 - **Visibility:** Private → "Trusted testers".
-- **Trusted testers:** add `oliver.egger@gmail.com` (one address per line). Testers install from the store URL of the item; they must be signed in to Chrome with that Google account.
+- **Trusted testers:** add the testers' Google account addresses (one per line). Testers install from the store URL of the item; they must be signed in to Chrome with that Google account.
 - **Regions:** Switzerland (or all).
 - Payments: free.
 
