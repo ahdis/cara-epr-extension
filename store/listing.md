@@ -81,7 +81,7 @@ Protezione dei dati: l'estensione comunica esclusivamente con il backend CARA (a
 
 ## Privacy practices tab
 
-**Single purpose:** Transfer, delete or back up the logged-in patient's own EPR documents between communities inside the CARA patient portal. The extension collects no data for the developer: names, tokens and documents are processed only inside the browser and sent solely to the CARA backend that the portal itself uses; nothing is stored or transmitted elsewhere.
+**Single purpose:** Transfer, delete or back up the logged-in patient's own EPR documents between communities inside the CARA patient portal. The extension collects no data for the developer: names, tokens and documents are processed only inside the browser and sent solely to the CARA backend that the portal itself uses. The only data written anywhere else are the backups and safety copies the user asks for, saved as files in the user's own Downloads folder, plus a local log of runs in the browser that the user can clear.
 
 **Permission justifications:**
 
