@@ -1,0 +1,13 @@
+const TOKEN_URL='https://api-portals.cara.ch/tenant/realm-pat-swissid/openid-connect/token', FHIR='https://api-portals.cara.ch/ad-adaptor/api/r4';
+const claims=t=>JSON.parse(Buffer.from(t.split('.')[1].replace(/-/g,'+').replace(/_/g,'/'),'base64').toString());
+const post=async p=>{const r=await fetch(TOKEN_URL,{method:'POST',body:new URLSearchParams(p)});if(!r.ok)throw new Error(r.status+' '+(await r.text()).slice(0,100));return r.json();};
+const idp=await post({grant_type:'refresh_token',client_id:'emedo-pr-web',redirect_uri:'https://patient.cara.ch/login',refresh_token:process.env.EPR_REFRESH_TOKEN});
+const xua=await post({client_id:'emedo-pr-web',grant_type:'urn:ietf:params:oauth:grant-type:token-exchange',subject_token:idp.access_token,subject_token_type:'urn:ietf:params:oauth:token-type:access_token',home_community_id:'urn:oid:2.16.756.5.30.1.177',purpose_of_use:'NORM',role:'PAT',resource_id:claims(idp.id_token).spid});
+const H={authorization:'Bearer '+xua.access_token};
+const b=await (await fetch(`${FHIR}/DocumentReference?status=current,superseded&_revinclude=List:item`,{headers:H})).json();
+const docs=b.entry.map(e=>e.resource).filter(r=>r.resourceType==='DocumentReference');
+console.log('docs now:',docs.length);
+const fresh=docs.filter(d=>(d.date||'')>='2026-09-12'||(d.content[0].attachment.creation||'')>='2026-09-12'||d.masterIdentifier?.value==='2.25.12245205668118866158136199162150215154244175');
+for(const d of fresh) console.log(JSON.stringify(d,null,1));
+const lists=b.entry.map(e=>e.resource).filter(r=>r.resourceType==='List');
+for(const l of lists) if((l.date||'')>='2026-09-12') console.log('NEW LIST:',JSON.stringify(l,null,1).slice(0,1500));

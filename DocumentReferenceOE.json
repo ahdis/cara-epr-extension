@@ -1,0 +1,5014 @@
+{
+  "resourceType": "Bundle",
+  "id": "a6e89840-f0ee-4adf-9b89-b6e2b71ad9c3",
+  "meta": {
+    "lastUpdated": "2026-09-12T07:27:39.228+02:00"
+  },
+  "type": "searchset",
+  "total": 25,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference?_revinclude=List%3Aitem&patient=Patient%2F761337615470857705&status=current%2Csuperseded"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/Mjk3ZTFhYjItNWM3MS00ZmQzLTk3ZGItMWUwNWExYmQxYzk3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "Mjk3ZTFhYjItNWM3MS00ZmQzLTk3ZGItMWUwNWExYmQxYzk3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "86e71fc6-13bb-4b01-88bd-8f0a409f8788",
+            "practitioner": {
+              "reference": "#99f020bd-af4f-4098-b4e4-ac545302f398"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "99f020bd-af4f-4098-b4e4-ac545302f398",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "f3ad7358-f41a-42b3-bd79-932b14acef61",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/Mjk3ZTFhYjItNWM3MS00ZmQzLTk3ZGItMWUwNWExYmQxYzk3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:297e1ab2-5c71-4fd3-97db-1e05a1bd1c97"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "8373598a-33bf-4383-97e4-98d7fb5c8d95"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:297e1ab2-5c71-4fd3-97db-1e05a1bd1c97"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#86e71fc6-13bb-4b01-88bd-8f0a409f8788"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeODM3MzU5OGEtMzNiZi00MzgzLTk3ZTQtOThkN2ZiNWM4ZDk1QDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 1239570,
+              "hash": "VqR12rJVgaTIjE+AlKV3BQQKM0E=",
+              "title": "19800101_Muster_Anna_Impfausweis",
+              "creation": "2021-01-29T14:39:00+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2021-01-29T14:39:00+01:00",
+            "end": "2021-01-29T14:39:00+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394747008",
+                "display": "Gesundheitsbehörde"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394658006",
+                "display": "Andere nicht näher spezifizierte medzinische Fachrichtung"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#f3ad7358-f41a-42b3-bd79-932b14acef61"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/NDAwN2Y1N2MtNmQwMy00NjRhLThhMzAtYzJkNzQ3MDIxYmQ3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "NDAwN2Y1N2MtNmQwMy00NjRhLThhMzAtYzJkNzQ3MDIxYmQ3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "202576c5-2100-4a01-8a86-1829860cd53b",
+            "practitioner": {
+              "reference": "#e04c1355-2a0c-45fc-9ad2-486e277b0405"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "e04c1355-2a0c-45fc-9ad2-486e277b0405",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "ae14b242-7af4-4295-b7d7-d3bee8e38deb",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/NDAwN2Y1N2MtNmQwMy00NjRhLThhMzAtYzJkNzQ3MDIxYmQ3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:4007f57c-6d03-464a-8a30-c2d747021bd7"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "79f2e0a8-3830-4520-83e0-869c027b6881"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:4007f57c-6d03-464a-8a30-c2d747021bd7"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#202576c5-2100-4a01-8a86-1829860cd53b"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeNzlmMmUwYTgtMzgzMC00NTIwLTgzZTAtODY5YzAyN2I2ODgxQDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 145525,
+              "hash": "J5eZ0kkXxLvntQaHglHoqgfihrM=",
+              "title": "Covid_vaccination_certificate",
+              "creation": "2022-06-03T14:15:01+02:00"
+            },
+            "format": {
+              "system": "1.3.6.1.4.1.19376.1.2.3",
+              "code": "urn:ihe:pcc:ic:2009",
+              "display": "Immunization Content (IC)"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2022-06-03T14:15:01+02:00",
+            "end": "2022-06-03T14:15:01+02:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394747008",
+                "display": "Gesundheitsbehörde"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "409968004",
+                "display": "Präventionsmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#ae14b242-7af4-4295-b7d7-d3bee8e38deb"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/NjI1OGUzMmUtODdlYS00ZTVmLWJlNjYtNjI1MzU5NjczMmE4QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "NjI1OGUzMmUtODdlYS00ZTVmLWJlNjYtNjI1MzU5NjczMmE4QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "2886b86c-f4e3-4a8e-be10-20e1e9556f51",
+            "practitioner": {
+              "reference": "#f90fb170-a890-4b07-a66e-cdb885acba54"
+            },
+            "organization": {
+              "reference": "#425ee7a6-f0bd-4bca-bc41-20e5d018bf4a"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "HCP"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "f90fb170-a890-4b07-a66e-cdb885acba54",
+            "name": [
+              {
+                "family": "Testarzt",
+                "given": [
+                  "Hans"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Organization",
+            "id": "425ee7a6-f0bd-4bca-bc41-20e5d018bf4a",
+            "identifier": [
+              {
+                "id": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "2.16.756.5.30.1.194.3.0.12.3.101"
+              }
+            ],
+            "name": "xsana Produktion"
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "23994733-cfa9-462e-8a12-80b5b9b57b99",
+            "name": [
+              {
+                "family": "Testarzt",
+                "given": [
+                  "Andrea"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "e8d9cfff-a2b9-483d-8020-09bc5a6ad308",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/NjI1OGUzMmUtODdlYS00ZTVmLWJlNjYtNjI1MzU5NjczMmE4QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:6258e32e-87ea-4e5f-be66-6253596732a8"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "6ba57851-bea5-4f03-8787-a3bfb9ec3728"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:6258e32e-87ea-4e5f-be66-6253596732a8"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "373942005",
+              "display": "Discharge summary"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "422735006",
+                "display": "Summary clinical document"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#2886b86c-f4e3-4a8e-be10-20e1e9556f51"
+          }
+        ],
+        "authenticator": {
+          "reference": "#23994733-cfa9-462e-8a12-80b5b9b57b99"
+        },
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeNmJhNTc4NTEtYmVhNS00ZjAzLTg3ODctYTNiZmI5ZWMzNzI4QDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 1276505,
+              "hash": "AbJ+vFHsnmR2xrrjBUkRS6Gj92Q=",
+              "title": "20221015_AustrittsberichtTriemli",
+              "creation": "2022-10-15T09:00:00+02:00"
+            },
+            "format": {
+              "system": "1.3.6.1.4.1.19376.1.2.3",
+              "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+              "display": "MimeType sufficient"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2022-10-15T09:00:00+02:00",
+            "end": "2022-10-15T09:00:00+02:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "22232009",
+                "display": "Stationäre Einrichtung/Spital"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394609007",
+                "display": "Chirurgie"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#e8d9cfff-a2b9-483d-8020-09bc5a6ad308"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/MzBmODAyOGQtNzQwNi00MWE4LWEwNDUtN2YwY2QyZTA3MzY1QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "MzBmODAyOGQtNzQwNi00MWE4LWEwNDUtN2YwY2QyZTA3MzY1QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "6356cd1e-56c9-4a52-89d6-03c15ad51fc0",
+            "practitioner": {
+              "reference": "#d070788e-49a3-4025-87f7-933aab36df24"
+            },
+            "organization": {
+              "reference": "#ac32a73b-5c94-4477-84fd-0e806243eb5a"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "d070788e-49a3-4025-87f7-933aab36df24",
+            "identifier": [
+              {
+                "system": "2.16.756.5.30.1.221.68.1",
+                "value": "2.16.756.5.30.1.221.68.1"
+              }
+            ],
+            "name": [
+              {
+                "family": "Beispiel",
+                "given": [
+                  "Petra"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Organization",
+            "id": "ac32a73b-5c94-4477-84fd-0e806243eb5a",
+            "identifier": [
+              {
+                "id": "2.16.756.5.30.1.221.68.1",
+                "value": "2.16.756.5.30.1.221.68.1"
+              }
+            ],
+            "name": "Praxis Beispiel AG"
+          },
+          {
+            "resourceType": "Patient",
+            "id": "60f5ae8c-6b56-40ef-8abe-88019cff76f6",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/MzBmODAyOGQtNzQwNi00MWE4LWEwNDUtN2YwY2QyZTA3MzY1QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:30f8028d-7406-41a8-a045-7f0cd2e07365"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "e5814302-0892-4c17-a09a-c9853d7113bb"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:30f8028d-7406-41a8-a045-7f0cd2e07365"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "419891008",
+              "display": "Sonstiges"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "422735006",
+                "display": "Zusammenfassung"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#6356cd1e-56c9-4a52-89d6-03c15ad51fc0"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeZTU4MTQzMDItMDg5Mi00YzE3LWEwOWEtYzk4NTNkNzExM2JiQDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 207040,
+              "hash": "In0oymJAQwFqRLZV96fsuMgzyyg=",
+              "title": "2024-10-11_BB_CobediasZs_1.pdf2024-10-11_BB_CobediasZs_1.pdf",
+              "creation": "2024-10-11T17:00:00+02:00"
+            },
+            "format": {
+              "system": "1.3.6.1.4.1.19376.1.2.3",
+              "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+              "display": "MimeType sufficient"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-10-11T17:00:00+02:00",
+            "end": "2024-10-11T17:00:00+02:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "264358009",
+                "display": "Arztpraxis"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#60f5ae8c-6b56-40ef-8abe-88019cff76f6"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/MTQ5NzI3YTItNTM4MS00MzFmLThmOTAtNjM3OWZlNjNmOTdlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "MTQ5NzI3YTItNTM4MS00MzFmLThmOTAtNjM3OWZlNjNmOTdlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "2",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "bf35e129-9df1-4ae6-9dcd-81e13923a926",
+            "practitioner": {
+              "reference": "#80e69f19-a836-4eb8-9cc3-66dba1785d51"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "HCP"
+                  }
+                ]
+              }
+            ],
+            "specialty": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.5",
+                    "code": "1050"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "80e69f19-a836-4eb8-9cc3-66dba1785d51",
+            "name": [
+              {
+                "family": "Anna Maria",
+                "given": [
+                  "Muster"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "527ce0bd-f831-4cac-911b-bd051432cb32",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "gender": "unknown"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/MDQzOWNkMTAtODMyNy00OWQ5LThiOGYtNDgzYjI4Y2NmMGE2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:0439cd10-8327-49d9-8b8f-483b28ccf0a6"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:2.25.282892873363514841812450202739754599485"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:149727a2-5381-431f-8f90-6379fe63f97e"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#bf35e129-9df1-4ae6-9dcd-81e13923a926"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4yNS4yODI4OTI4NzMzNjM1MTQ4NDE4MTI0NTAyMDI3Mzk3NTQ1OTk0ODVAMi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMS4xMDEuMzFAdXJuOm9pZDoyLjE2Ljc1Ni41LjMwLjEuMTk0LjMuMA==",
+              "size": 5570,
+              "hash": "OQlAcjeC8F/xsJWhrLw/JOZQqDk=",
+              "title": "Vaccination - Spikevax (COVID-19 Vaccine, Moderna)",
+              "creation": "2024-10-28T15:26:26+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-10-28T15:26:26+01:00",
+            "end": "2024-10-28T15:26:26+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#527ce0bd-f831-4cac-911b-bd051432cb32"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/OTZiMmNmZGMtZDgxYi00YzFjLTk4ZWItMGRmMjIzNTE1OTgyQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "OTZiMmNmZGMtZDgxYi00YzFjLTk4ZWItMGRmMjIzNTE1OTgyQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "4",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "ce977b1c-83c5-4110-a136-6469292ce921",
+            "practitioner": {
+              "reference": "#5083bd97-af9f-4bcd-8fd9-f3abeaa10e8c"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "HCP"
+                  }
+                ]
+              }
+            ],
+            "specialty": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.5",
+                    "code": "1050"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "5083bd97-af9f-4bcd-8fd9-f3abeaa10e8c",
+            "name": [
+              {
+                "family": "Anna Maria",
+                "given": [
+                  "Muster"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "fbf4fc2d-6134-47b0-923e-f44fea6b2b13",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "gender": "unknown"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/YWE3NmM4MjktMTYxNy00ZDZjLWFmMmYtOThhZTU5MTEwYjU5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:aa76c829-1617-4d6c-af2f-98ae59110b59"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:2.25.144511982046096556040435783899997849512"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:96b2cfdc-d81b-4c1c-98eb-0df223515982"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#ce977b1c-83c5-4110-a136-6469292ce921"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4yNS4xNDQ1MTE5ODIwNDYwOTY1NTYwNDA0MzU3ODM4OTk5OTc4NDk1MTJAMi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMS4xMDEuMzFAdXJuOm9pZDoyLjE2Ljc1Ni41LjMwLjEuMTk0LjMuMA==",
+              "size": 5576,
+              "hash": "C8UPFpjZhGgGTfUIxMY41pOeygA=",
+              "title": "Vaccination - Spikevax (COVID-19 Vaccine, Moderna)",
+              "creation": "2024-10-28T15:27:12+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-10-28T15:27:12+01:00",
+            "end": "2024-10-28T15:27:12+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#fbf4fc2d-6134-47b0-923e-f44fea6b2b13"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/NWE3MzFiM2UtYmYxMC00NWE0LWE5MTMtMzg1NWE3OTI3Y2M2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "NWE3MzFiM2UtYmYxMC00NWE0LWE5MTMtMzg1NWE3OTI3Y2M2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "e4ad5bb9-0140-43d5-915b-20c6523bb9b1",
+            "practitioner": {
+              "reference": "#2a0c5b5b-76dd-434d-bc95-086fcf4403d5"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "2a0c5b5b-76dd-434d-bc95-086fcf4403d5",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "87b076e9-b2bd-400e-b56e-319ff079d5ba",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/NWE3MzFiM2UtYmYxMC00NWE0LWE5MTMtMzg1NWE3OTI3Y2M2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:5a731b3e-bf10-45a4-a913-3855a7927cc6"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "9a84de12-06a9-4aab-b934-a77bf4043a95"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:5a731b3e-bf10-45a4-a913-3855a7927cc6"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#e4ad5bb9-0140-43d5-915b-20c6523bb9b1"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeOWE4NGRlMTItMDZhOS00YWFiLWI5MzQtYTc3YmY0MDQzYTk1QDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 6080,
+              "hash": "QyEUTMnPGmR/1AjnqUkhwZWgv88=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:36:02+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:36:02+01:00",
+            "end": "2024-12-20T16:36:02+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#87b076e9-b2bd-400e-b56e-319ff079d5ba"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/Njc3ZDE2ZDUtMmE4YS00OWEzLTlhMmItODU1YjhhYjA1OTU1QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "Njc3ZDE2ZDUtMmE4YS00OWEzLTlhMmItODU1YjhhYjA1OTU1QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "07f7255c-0f8c-4aac-bff2-04ba2274bed3",
+            "practitioner": {
+              "reference": "#cba18511-4863-460a-82e2-1f750013624d"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "cba18511-4863-460a-82e2-1f750013624d",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "193cc78d-d8b6-483d-a7a9-a289ed11f98d",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/Njc3ZDE2ZDUtMmE4YS00OWEzLTlhMmItODU1YjhhYjA1OTU1QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:677d16d5-2a8a-49a3-9a2b-855b8ab05955"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "94377a65-2503-438f-8724-7f6447e1ff64"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:677d16d5-2a8a-49a3-9a2b-855b8ab05955"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#07f7255c-0f8c-4aac-bff2-04ba2274bed3"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:4eb538c1-559e-4bf8-ba77-40a0c78bf033",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/NWE3MzFiM2UtYmYxMC00NWE0LWE5MTMtMzg1NWE3OTI3Y2M2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeOTQzNzdhNjUtMjUwMy00MzhmLTg3MjQtN2Y2NDQ3ZTFmZjY0QDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 5606,
+              "hash": "81xbKJjpY66AGUpUhrq5tVAT2ks=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:39:28+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:39:28+01:00",
+            "end": "2024-12-20T16:39:28+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#193cc78d-d8b6-483d-a7a9-a289ed11f98d"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/NGZlYjJjZjktMzVjNC00OGNmLTg2ODQtODA3N2JlZjA3ZmVlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "NGZlYjJjZjktMzVjNC00OGNmLTg2ODQtODA3N2JlZjA3ZmVlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "634e134b-8cb7-40d4-ad4e-3a0d1c2a72fc",
+            "practitioner": {
+              "reference": "#fbfc4dc8-b16a-4476-a533-9405a90c8a47"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "fbfc4dc8-b16a-4476-a533-9405a90c8a47",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "2d65ac7c-f021-4976-ac98-7c6348e52166",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/NGZlYjJjZjktMzVjNC00OGNmLTg2ODQtODA3N2JlZjA3ZmVlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:4feb2cf9-35c4-48cf-8684-8077bef07fee"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "15349ff3-2457-432f-becd-e5952d32f990"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:4feb2cf9-35c4-48cf-8684-8077bef07fee"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#634e134b-8cb7-40d4-ad4e-3a0d1c2a72fc"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:e85a4918-dbd2-4bf0-9357-33ec46ceebe1",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/Njc3ZDE2ZDUtMmE4YS00OWEzLTlhMmItODU1YjhhYjA1OTU1QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeMTUzNDlmZjMtMjQ1Ny00MzJmLWJlY2QtZTU5NTJkMzJmOTkwQDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 5414,
+              "hash": "UKs+kp9HaW5OXSOouvtAxKslJ+Q=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:40:41+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:40:41+01:00",
+            "end": "2024-12-20T16:40:41+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#2d65ac7c-f021-4976-ac98-7c6348e52166"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/MWVmZDQ1ZTEtZmJkYi00ZDlhLTlmMzUtYjI1ODljOTFlOWY2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "MWVmZDQ1ZTEtZmJkYi00ZDlhLTlmMzUtYjI1ODljOTFlOWY2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "7665fb3d-7017-44bb-a05f-a9dd58695cb5",
+            "practitioner": {
+              "reference": "#28f2b75b-9c24-491c-a757-6215c8232419"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "28f2b75b-9c24-491c-a757-6215c8232419",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "fd62e0db-5d8e-4ed4-81ca-a04b11658725",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/MWVmZDQ1ZTEtZmJkYi00ZDlhLTlmMzUtYjI1ODljOTFlOWY2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:1efd45e1-fbdb-4d9a-9f35-b2589c91e9f6"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "ef9b3c93-921e-4d55-b1d0-0cb5c44e0f88"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:1efd45e1-fbdb-4d9a-9f35-b2589c91e9f6"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#7665fb3d-7017-44bb-a05f-a9dd58695cb5"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:1ffa9be2-0ad0-4967-9e5a-011bf142300b",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/NGZlYjJjZjktMzVjNC00OGNmLTg2ODQtODA3N2JlZjA3ZmVlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeZWY5YjNjOTMtOTIxZS00ZDU1LWIxZDAtMGNiNWM0NGUwZjg4QDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 5500,
+              "hash": "1LK8r9xDTzj9p6sWnVdw7q6Kmx8=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:41:54+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:41:54+01:00",
+            "end": "2024-12-20T16:41:54+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#fd62e0db-5d8e-4ed4-81ca-a04b11658725"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/NzYzNmMzZTQtZTRlMi00MzI4LWEyNmYtMWI0MWI2YmE3NTc0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "NzYzNmMzZTQtZTRlMi00MzI4LWEyNmYtMWI0MWI2YmE3NTc0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "7c4f062a-1c58-4b0a-88da-081dedeee888",
+            "practitioner": {
+              "reference": "#d7fed585-e15c-4fee-8296-3826cefe0f68"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "d7fed585-e15c-4fee-8296-3826cefe0f68",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "25a9704c-f513-4a51-aeb3-1e0a26f1ced8",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/NzYzNmMzZTQtZTRlMi00MzI4LWEyNmYtMWI0MWI2YmE3NTc0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:7636c3e4-e4e2-4328-a26f-1b41b6ba7574"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "21fe7b4c-ed3b-48d2-b2c1-1686b69d45c7"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:7636c3e4-e4e2-4328-a26f-1b41b6ba7574"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#7c4f062a-1c58-4b0a-88da-081dedeee888"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:819a5889-3605-4d28-a06d-f5b98ca4bb71",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/MWVmZDQ1ZTEtZmJkYi00ZDlhLTlmMzUtYjI1ODljOTFlOWY2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeMjFmZTdiNGMtZWQzYi00OGQyLWIyYzEtMTY4NmI2OWQ0NWM3QDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 5689,
+              "hash": "3xle/YIQHEeaOTlxBLJOL4rF9tI=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:43:23+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:43:23+01:00",
+            "end": "2024-12-20T16:43:23+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#25a9704c-f513-4a51-aeb3-1e0a26f1ced8"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/N2Y4ZWIwMDgtNzdjZC00YzVjLWI2Y2QtODdlMTY1MGU3MTQxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "N2Y4ZWIwMDgtNzdjZC00YzVjLWI2Y2QtODdlMTY1MGU3MTQxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "d27cf50b-faec-49fa-9060-f5a77806933f",
+            "practitioner": {
+              "reference": "#bca31b8e-72d6-40dd-a52e-0938eb1576cd"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "bca31b8e-72d6-40dd-a52e-0938eb1576cd",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "36a540d2-2a18-440c-8e5c-d21b8c557bcd",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/N2Y4ZWIwMDgtNzdjZC00YzVjLWI2Y2QtODdlMTY1MGU3MTQxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:7f8eb008-77cd-4c5c-b6cd-87e1650e7141"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "c304cff0-0008-4bd2-89d8-d2c694c4e91b"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:7f8eb008-77cd-4c5c-b6cd-87e1650e7141"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#d27cf50b-faec-49fa-9060-f5a77806933f"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:b5395ec5-250c-4886-9e46-f666c801375c",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/NzYzNmMzZTQtZTRlMi00MzI4LWEyNmYtMWI0MWI2YmE3NTc0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeYzMwNGNmZjAtMDAwOC00YmQyLTg5ZDgtZDJjNjk0YzRlOTFiQDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 6267,
+              "hash": "p/46oG8FyUnzqhsIk83zleJarW8=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:48:09+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:48:09+01:00",
+            "end": "2024-12-20T16:48:09+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#36a540d2-2a18-440c-8e5c-d21b8c557bcd"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/MWI1N2YxOTQtYWI0Yi00MTUwLThmZDUtZjZmOWM2YzZjZWM5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "MWI1N2YxOTQtYWI0Yi00MTUwLThmZDUtZjZmOWM2YzZjZWM5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "7624130f-26b3-44f6-89cc-671510c82d5b",
+            "practitioner": {
+              "reference": "#619b29c9-6aae-4697-9032-51b8b36f7c66"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "619b29c9-6aae-4697-9032-51b8b36f7c66",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "96d0f88b-e31a-4523-850d-462dde65ffe8",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/MWI1N2YxOTQtYWI0Yi00MTUwLThmZDUtZjZmOWM2YzZjZWM5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:1b57f194-ab4b-4150-8fd5-f6f9c6c6cec9"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "cfa3c7e0-4449-4c4a-ba0a-a8e78871dcdd"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:1b57f194-ab4b-4150-8fd5-f6f9c6c6cec9"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#7624130f-26b3-44f6-89cc-671510c82d5b"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:558d85e0-b7b4-4981-a584-aaeb0137daf7",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/N2Y4ZWIwMDgtNzdjZC00YzVjLWI2Y2QtODdlMTY1MGU3MTQxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeY2ZhM2M3ZTAtNDQ0OS00YzRhLWJhMGEtYThlNzg4NzFkY2RkQDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 6269,
+              "hash": "/UJx3jq3wzHDj656GzF6MblY4XI=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:49:28+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:49:28+01:00",
+            "end": "2024-12-20T16:49:28+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#96d0f88b-e31a-4523-850d-462dde65ffe8"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/NDhlNjBkZDktMzk4Zi00ZmM4LWExOGMtZjg0NzRiYmRkZDRkQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "NDhlNjBkZDktMzk4Zi00ZmM4LWExOGMtZjg0NzRiYmRkZDRkQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "ba9e2746-bdb6-42f8-a0ab-e99b59f30937",
+            "practitioner": {
+              "reference": "#7beb6805-b335-4b1b-8c3a-30b5c247a535"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "7beb6805-b335-4b1b-8c3a-30b5c247a535",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "0f0d1214-4d8c-4cc8-823e-4f81164b155d",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/NDhlNjBkZDktMzk4Zi00ZmM4LWExOGMtZjg0NzRiYmRkZDRkQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:48e60dd9-398f-4fc8-a18c-f8474bbddd4d"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "0e2d1df1-25bf-43c3-b74b-72b2a2e40c55"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:48e60dd9-398f-4fc8-a18c-f8474bbddd4d"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#ba9e2746-bdb6-42f8-a0ab-e99b59f30937"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:3745f067-356a-4486-b78b-24bf88224c33",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/MWI1N2YxOTQtYWI0Yi00MTUwLThmZDUtZjZmOWM2YzZjZWM5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeMGUyZDFkZjEtMjViZi00M2MzLWI3NGItNzJiMmEyZTQwYzU1QDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 6565,
+              "hash": "1Kcq/rgsC0Mo/uPP4klNX6WvpQ4=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:53:18+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:53:18+01:00",
+            "end": "2024-12-20T16:53:18+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#0f0d1214-4d8c-4cc8-823e-4f81164b155d"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/NjNiZDZjMmItMWFkOC00YjExLTgzNzgtMWQ5YTQyMzU4NmM3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "NjNiZDZjMmItMWFkOC00YjExLTgzNzgtMWQ5YTQyMzU4NmM3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "75f6e65c-c39d-41ca-ab28-5c844e18d20e",
+            "practitioner": {
+              "reference": "#c7ced284-d86e-4c4b-9657-673b9657c953"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "c7ced284-d86e-4c4b-9657-673b9657c953",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "59cde166-6f31-4ccd-a229-8f7c64ad04cc",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/NjNiZDZjMmItMWFkOC00YjExLTgzNzgtMWQ5YTQyMzU4NmM3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:63bd6c2b-1ad8-4b11-8378-1d9a423586c7"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "52f33106-703e-4b25-840d-c8b48f1e65dc"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:63bd6c2b-1ad8-4b11-8378-1d9a423586c7"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#75f6e65c-c39d-41ca-ab28-5c844e18d20e"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:02d3fe1c-120a-4565-802d-299474e1e6cb",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/NDhlNjBkZDktMzk4Zi00ZmM4LWExOGMtZjg0NzRiYmRkZDRkQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeNTJmMzMxMDYtNzAzZS00YjI1LTg0MGQtYzhiNDhmMWU2NWRjQDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 6339,
+              "hash": "aSsYZDpVnwtk4D90sSSLk65pg7I=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:54:58+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:54:58+01:00",
+            "end": "2024-12-20T16:54:58+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#59cde166-6f31-4ccd-a229-8f7c64ad04cc"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/ODYxNWJlMmMtZTE4Ny00M2QxLTkwZTItMTQxMjAyNTZhZTEzQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "ODYxNWJlMmMtZTE4Ny00M2QxLTkwZTItMTQxMjAyNTZhZTEzQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "e79eccab-2c81-4229-be82-636116550068",
+            "practitioner": {
+              "reference": "#af199cda-e580-4f2b-9a88-a8e8aad628b7"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "af199cda-e580-4f2b-9a88-a8e8aad628b7",
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "e314cf76-7efa-4f7c-9ec5-99066dde10bc",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/ODYxNWJlMmMtZTE4Ny00M2QxLTkwZTItMTQxMjAyNTZhZTEzQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:8615be2c-e187-43d1-90e2-14120256ae13"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "eac8668f-dc54-40ab-bece-f75ae9330e84"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:8615be2c-e187-43d1-90e2-14120256ae13"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#e79eccab-2c81-4229-be82-636116550068"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:26254107-96ea-4941-8724-6fa9a8c8024f",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/NjNiZDZjMmItMWFkOC00YjExLTgzNzgtMWQ5YTQyMzU4NmM3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeZWFjODY2OGYtZGM1NC00MGFiLWJlY2UtZjc1YWU5MzMwZTg0QDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 6362,
+              "hash": "2vhTKjllAyR9nLBp8wUGWNzmdC4=",
+              "title": "2024-12-13-FluarixTextra-working",
+              "creation": "2024-12-20T16:56:59+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-20T16:56:59+01:00",
+            "end": "2024-12-20T16:56:59+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#e314cf76-7efa-4f7c-9ec5-99066dde10bc"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/NTg3ZDRhNTktZTY2Mi00ZmNiLWI3MDgtOTZmZWM5ZDI0MDQ5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "NTg3ZDRhNTktZTY2Mi00ZmNiLWI3MDgtOTZmZWM5ZDI0MDQ5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "41f31eb3-c5b5-46a2-b471-3a20fbcce2d4",
+            "practitioner": {
+              "reference": "#a21f55ae-8fb7-48a4-b52f-d7a5d4e7052c"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ],
+            "specialty": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.5",
+                    "code": "1050"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "a21f55ae-8fb7-48a4-b52f-d7a5d4e7052c",
+            "name": [
+              {
+                "family": "Anna Maria",
+                "given": [
+                  "Muster"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "2a2dc364-009f-4672-8b07-3584c055d41c",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/NTg3ZDRhNTktZTY2Mi00ZmNiLWI3MDgtOTZmZWM5ZDI0MDQ5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:587d4a59-e662-4fcb-b708-96fec9d24049"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:2.25.90327268948707917849261894056954206386"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:587d4a59-e662-4fcb-b708-96fec9d24049"
+          }
+        ],
+        "status": "superseded",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Immunization Record (record artifact)"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Patient record type (record artifact)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#41f31eb3-c5b5-46a2-b471-3a20fbcce2d4"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "en",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4yNS45MDMyNzI2ODk0ODcwNzkxNzg0OTI2MTg5NDA1Njk1NDIwNjM4NkAyLjE2Ljc1Ni41LjMwLjEuMTk0LjMuMC4xMi4xLjEwMS4zMUB1cm46b2lkOjIuMTYuNzU2LjUuMzAuMS4xOTQuMy4w",
+              "size": 6118,
+              "hash": "GDyjmv3n1p1unGx4rBwUa15dLL4=",
+              "title": "Vaccination - FSME-Immun CC",
+              "creation": "2024-12-26T14:39:23+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "CH VACD Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Site of Care (environment)"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "General medicine (qualifier value)"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#2a2dc364-009f-4672-8b07-3584c055d41c"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/M2NkMzJkZjEtNWQxMS00MzM2LWI0MDgtMjQ5NWQwYTBkNWQ3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "M2NkMzJkZjEtNWQxMS00MzM2LWI0MDgtMjQ5NWQwYTBkNWQ3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "dbc32586-a970-449d-8553-35508bd69286",
+            "practitioner": {
+              "reference": "#bfa9b33f-291b-4d0a-903d-d0fcc856a55b"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ],
+            "specialty": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.5",
+                    "code": "1050"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "bfa9b33f-291b-4d0a-903d-d0fcc856a55b",
+            "name": [
+              {
+                "family": "Anna Maria",
+                "given": [
+                  "Muster"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "25b2c179-9a6b-4031-a720-fb25e3306a28",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ],
+            "name": [
+              {
+                "family": "Muster",
+                "given": [
+                  "Anna Maria"
+                ]
+              }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+              {
+                "line": [
+                  "Musterstrasse 1"
+                ],
+                "city": "Zürich",
+                "postalCode": "8000",
+                "country": "Schweiz"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/M2NkMzJkZjEtNWQxMS00MzM2LWI0MDgtMjQ5NWQwYTBkNWQ3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:3cd32df1-5d11-4336-b408-2495d0a0d5d7"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:sense:2020:sending-system",
+                "valueString": "ITH Portal"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:oid:2.16.756.5.30.1.194.3.0.12.3.101",
+          "value": "4ec79065-7db6-4f65-8106-0af0fa9f6bac"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:3cd32df1-5d11-4336-b408-2495d0a0d5d7"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Impfung"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Dokumentation"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#dbc32586-a970-449d-8553-35508bd69286"
+          }
+        ],
+        "relatesTo": [
+          {
+            "id": "urn:uuid:d12d8b25-c153-498c-ad34-8caecbe48c2e",
+            "code": "replaces",
+            "target": {
+              "reference": "DocumentReference/NTg3ZDRhNTktZTY2Mi00ZmNiLWI3MDgtOTZmZWM5ZDI0MDQ5QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA="
+            }
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal zugängliche Dokumente"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "de-CH",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMy4xMDFeNGVjNzkwNjUtN2RiNi00ZjY1LTgxMDYtMGFmMGZhOWY2YmFjQDIuMTYuNzU2LjUuMzAuMS4xOTQuMy4wLjEyLjEuMTAxLjMxQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "size": 7751,
+              "hash": "7fAKSpANEscB0qXEIj3r7ET1Ifk=",
+              "title": "Vaccination - FSME-Immun CC",
+              "creation": "2024-12-26T14:48:03+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "period": {
+            "start": "2024-12-26T14:48:03+01:00",
+            "end": "2024-12-26T14:48:03+01:00"
+          },
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Andere Gesundheitsorganisation"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "Allgemeinmedizin"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#25b2c179-9a6b-4031-a720-fb25e3306a28"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/OWNkNDUyMTUtYmY4Yy00ZGE1LThjZWItYTMzOTExNGJmOTRlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "OWNkNDUyMTUtYmY4Yy00ZGE1LThjZWItYTMzOTExNGJmOTRlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "28dcf11e-2889-47d9-83b9-1c52db4a7263",
+            "practitioner": {
+              "reference": "#e76e86c2-825c-43ff-8aec-b8a331cb698c"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ],
+            "specialty": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.5",
+                    "code": "1050"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "e76e86c2-825c-43ff-8aec-b8a331cb698c",
+            "name": [
+              {
+                "family": "Anna Maria",
+                "given": [
+                  "Muster"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "cb51da96-f1fe-495a-bad3-cf4e0301babc",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.194.3.0.12.3.101",
+                "value": "00000000-0000-4000-8000-000000000001"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.194.3.0"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/OWNkNDUyMTUtYmY4Yy00ZGE1LThjZWItYTMzOTExNGJmOTRlQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE5NC4zLjA=",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:9cd45215-bf8c-4da5-8ceb-a339114bf94e"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.194.3.0.12.1.101.31"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "PAT^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "PAT"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:2.25.210832852017505766004297552549805255437"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:9cd45215-bf8c-4da5-8ceb-a339114bf94e"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103",
+              "display": "Immunization Record (record artifact)"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000",
+                "display": "Patient record type (record artifact)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/3fda9516-3993-43e2-b00a-574c7b91efd6"
+        },
+        "author": [
+          {
+            "reference": "#28dcf11e-2889-47d9-83b9-1c52db4a7263"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "en",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4yNS4yMTA4MzI4NTIwMTc1MDU3NjYwMDQyOTc1NTI1NDk4MDUyNTU0MzdAMi4xNi43NTYuNS4zMC4xLjE5NC4zLjAuMTIuMS4xMDEuMzFAdXJuOm9pZDoyLjE2Ljc1Ni41LjMwLjEuMTk0LjMuMA==",
+              "size": 6154,
+              "hash": "+ALEhysRIokg9P3po5KCdFEAYLE=",
+              "title": "Vaccination - Fluarix Tetra",
+              "creation": "2025-02-07T09:05:05+01:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022",
+              "display": "CH VACD Immunization Administration"
+            }
+          }
+        ],
+        "context": {
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "43741000",
+                "display": "Site of Care (environment)"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394802001",
+                "display": "General medicine (qualifier value)"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#cb51da96-f1fe-495a-bad3-cf4e0301babc"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/ZDgyNGZmZDEtYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "ZDgyNGZmZDEtYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "0ec8173a-b0f2-462e-a6df-acea3f50b189",
+            "practitioner": {
+              "reference": "#6fcf927c-7008-4b23-9a17-db594d7fccbc"
+            },
+            "organization": {
+              "reference": "#5cebbacf-febe-4db1-a8c3-cf17f44f133f"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "TCU"
+                  }
+                ]
+              }
+            ],
+            "specialty": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.5",
+                    "code": "1050"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "6fcf927c-7008-4b23-9a17-db594d7fccbc",
+            "name": [
+              {
+                "family": "Beispielärztin",
+                "given": [
+                  "Nicole"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Organization",
+            "id": "5cebbacf-febe-4db1-a8c3-cf17f44f133f",
+            "name": "SteHAG"
+          },
+          {
+            "resourceType": "Patient",
+            "id": "ee8bbc8b-c9f5-460d-9e09-8a808ea1b458",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.177.2.2.2.1",
+                "value": "100000001"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.177"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/MjlkNjEyNzUtMzM4ZC0xMWVmLWFmMjItMDI0MjY0NTEwMTA2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:29d61275-338d-11ef-af22-024264510106"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.177.2.2.2.1.2"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "TCU^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:healthshare:slots:sourceId",
+                "valueString": "1.3.6.1.4.1.21367.2017.2.1.89"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "TCU"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:2.25.287303311623030869168340875287624483588"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:d824ffd1-add4-11ef-ab21-024264510304"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/100000001"
+        },
+        "author": [
+          {
+            "reference": "#0ec8173a-b0f2-462e-a6df-acea3f50b189"
+          }
+        ],
+        "description": "Vaccination record in need of validation.",
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "language": "en",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4yNS4yODczMDMzMTE2MjMwMzA4NjkxNjgzNDA4NzUyODc2MjQ0ODM1ODhAMi4xNi43NTYuNS4zMC4xLjE3Ny4yLjIuMi4xLjJAdXJuOm9pZDoyLjE2Ljc1Ni41LjMwLjEuMTc3",
+              "size": 216624,
+              "hash": "QZrZpPUn4GlT3wrsNjfBcwvR2Ek=",
+              "title": "Immunization Administration",
+              "creation": "2024-06-26T09:24:52+02:00"
+            },
+            "format": {
+              "system": "2.16.756.5.30.1.127.3.10.10",
+              "code": "urn:che:epr:ch-vacd:immunization-administration:2022"
+            }
+          }
+        ],
+        "context": {
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394747008"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "408480009",
+                "display": "Clinical immunology"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#ee8bbc8b-c9f5-460d-9e09-8a808ea1b458"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/ZDg5ZjFlMGQtYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "ZDg5ZjFlMGQtYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "2f6f8b99-ac38-47ba-a2d6-1458cfd43c8d",
+            "practitioner": {
+              "reference": "#c918ef20-ceca-44d2-83a0-b21f75251e27"
+            },
+            "organization": {
+              "reference": "#e55ac78e-3fa1-41e4-8052-c532969f2b06"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "TCU"
+                  }
+                ]
+              }
+            ],
+            "specialty": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.5",
+                    "code": "1050"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "c918ef20-ceca-44d2-83a0-b21f75251e27",
+            "name": [
+              {
+                "family": "Beispielärztin",
+                "given": [
+                  "Nicole"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Organization",
+            "id": "e55ac78e-3fa1-41e4-8052-c532969f2b06",
+            "name": "SteHAG"
+          },
+          {
+            "resourceType": "Patient",
+            "id": "b0aac146-eaa1-4830-b4bc-ba034022087e",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.177.2.2.2.1",
+                "value": "100000001"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.177"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/MmI4ODhkY2ItMzM4ZC0xMWVmLWFmMjItMDI0MjY0NTEwMTA2QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:2b888dcb-338d-11ef-af22-024264510106"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.177.2.2.2.1.2"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "TCU^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:healthshare:slots:sourceId",
+                "valueString": "1.3.6.1.4.1.21367.2017.2.1.89"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "TCU"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:2.25.287937483942496796346887886612814955268"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:d89f1e0d-add4-11ef-ab21-024264510304"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "41000179103"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "184216000"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/100000001"
+        },
+        "author": [
+          {
+            "reference": "#2f6f8b99-ac38-47ba-a2d6-1458cfd43c8d"
+          }
+        ],
+        "description": "Vaccination record in need of validation.",
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "language": "OTHER",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4yNS4yODc5Mzc0ODM5NDI0OTY3OTYzNDY4ODc4ODY2MTI4MTQ5NTUyNjhAMi4xNi43NTYuNS4zMC4xLjE3Ny4yLjIuMi4xLjJAdXJuOm9pZDoyLjE2Ljc1Ni41LjMwLjEuMTc3",
+              "size": 45466,
+              "hash": "MeV31g0p+lYpWUybnlscXQQ42+Y=",
+              "title": "Immunization Administration",
+              "creation": "2024-06-26T09:24:59+02:00"
+            },
+            "format": {
+              "system": "1.3.6.1.4.1.19376.1.2.3",
+              "code": "urn:ihe:pcc:ic:2009"
+            }
+          }
+        ],
+        "context": {
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "394747008"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "408480009",
+                "display": "Clinical immunology"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#b0aac146-eaa1-4830-b4bc-ba034022087e"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/DocumentReference/YjVhYzg5ZjgtMjI1ZS00NmM0LThiMDctMmExMmMzYWQ4M2JhQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "YjVhYzg5ZjgtMjI1ZS00NmM0LThiMDctMmExMmMzYWQ4M2JhQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "Practitioner",
+            "id": "e56d1947-3f25-4b01-b0b8-2227e7bef57b",
+            "name": [
+              {
+                "family": "Beispiel",
+                "given": [
+                  "Petra"
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Patient",
+            "id": "c2bab59a-f487-4183-9703-d4851090377d",
+            "identifier": [
+              {
+                "use": "usual",
+                "system": "2.16.756.5.30.1.127.3.10.3",
+                "value": "ABCDEFGHIJKLM"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.177"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/logicalEntry",
+            "valueReference": {
+              "reference": "DocumentReference/YjVhYzg5ZjgtMjI1ZS00NmM0LThiMDctMmExMmMzYWQ4M2JhQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+              "identifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:b5ac89f8-225e-46c4-8b07-2a12c3ad83ba"
+              }
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/repositoryUniqueId",
+            "valueString": "2.16.756.5.30.1.177.2.2.2.1.2"
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/extraMetadata",
+            "extension": [
+              {
+                "url": "urn:e-health-suisse:2020:originalProviderRole",
+                "valueString": "DADM^^^&2.16.756.5.30.1.127.3.10.6&ISO"
+              },
+              {
+                "url": "urn:e-health-suisse:2019:deletionStatus",
+                "valueString": "urn:e-health-suisse:2019:deletionStatus:deletionNotRequested"
+              },
+              {
+                "url": "urn:healthshare:slots:sourceId",
+                "valueString": "1.2.276.0.76.4.15.1.1.10.7"
+              }
+            ]
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-deletionstatus",
+            "valueCoding": {
+              "system": "http://fhir.ch/ig/ch-epr-mhealth/CodeSystem/ch-ehealth-codesystem-deletionstatus",
+              "code": "deletionNotRequested"
+            }
+          },
+          {
+            "url": "http://fhir.ch/ig/ch-epr-mhealth/StructureDefinition/ch-ext-author-authorrole",
+            "valueCoding": {
+              "system": "2.16.756.5.30.1.127.3.10.6",
+              "code": "DADM"
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:2.25.76763457174100708715023318564147184167237"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:b5ac89f8-225e-46c4-8b07-2a12c3ad83ba"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "2.16.840.1.113883.6.96",
+              "code": "419891008",
+              "display": "Record artifact (record artifact)"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "371531000",
+                "display": "Report of clinical encounter (record artifact)"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/100000001"
+        },
+        "author": [
+          {
+            "reference": "#e56d1947-3f25-4b01-b0b8-2227e7bef57b"
+          }
+        ],
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "17621005",
+                "display": "Normal (qualifier value)"
+              }
+            ]
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "language": "de",
+              "url": "https://api-portals.cara.ch/ad-adaptor/api/r4/Binary/Mi4yNS43Njc2MzQ1NzE3NDEwMDcwODcxNTAyMzMxODU2NDE0NzE4NDE2NzIzN0AyLjE2Ljc1Ni41LjMwLjEuMTc3LjIuMi4yLjEuMkB1cm46b2lkOjIuMTYuNzU2LjUuMzAuMS4xNzc=",
+              "size": 206844,
+              "hash": "xPGaRr+hOda10YAeL3FCfKjVFLE=",
+              "title": "2024-10-11_COBEDIAS Zusammenfassung Krankengeschichte",
+              "creation": "2024-12-08T00:00:00+01:00"
+            },
+            "format": {
+              "system": "1.3.6.1.4.1.19376.1.2.3",
+              "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+              "display": "MimeType sufficient"
+            }
+          }
+        ],
+        "context": {
+          "facilityType": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "264358009",
+                "display": "General practice premises (environment)"
+              }
+            ]
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "system": "2.16.840.1.113883.6.96",
+                "code": "419192003",
+                "display": "Internal medicine (qualifier value)"
+              }
+            ]
+          },
+          "sourcePatientInfo": {
+            "reference": "#c2bab59a-f487-4183-9703-d4851090377d"
+          }
+        }
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/List/ZDgyNGU2OTItYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+      "resource": {
+        "resourceType": "List",
+        "id": "ZDgyNGU2OTItYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.List",
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.SubmissionSet"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "bd26a3a1-b347-482d-85e1-d07bbd6010e1",
+            "practitioner": {
+              "reference": "#6984e750-c3a1-4b06-ba67-06d30a3f3d1c"
+            },
+            "organization": {
+              "reference": "#2dcb6a71-c634-4346-85b8-599b436b4e26"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "DADM"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "6984e750-c3a1-4b06-ba67-06d30a3f3d1c"
+          },
+          {
+            "resourceType": "Organization",
+            "id": "2dcb6a71-c634-4346-85b8-599b436b4e26",
+            "identifier": [
+              {
+                "id": "2.16.756.5.30.1.177",
+                "value": "2.16.756.5.30.1.177"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.6.96",
+                  "code": "71388002"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId",
+            "valueIdentifier": {
+              "value": "urn:oid:1.3.6.1.4.1.21367.2017.2.1.89"
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.177"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:2.25.287304846351766932982824399827486442244"
+          },
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:d824e692-add4-11ef-ab21-024264510304"
+          }
+        ],
+        "status": "current",
+        "mode": "working",
+        "code": {
+          "coding": [
+            {
+              "system": "http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+              "code": "submissionset"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/100000001"
+        },
+        "date": "2024-11-28T23:05:14+01:00",
+        "source": {
+          "reference": "#bd26a3a1-b347-482d-85e1-d07bbd6010e1"
+        },
+        "entry": [
+          {
+            "item": {
+              "reference": "DocumentReference/ZDgyNGZmZDEtYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw=="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/List/ZDg5ZjA4ZjAtYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+      "resource": {
+        "resourceType": "List",
+        "id": "ZDg5ZjA4ZjAtYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.List",
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.SubmissionSet"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "766386f2-f58d-45a9-a565-da37e1ac0fa7",
+            "practitioner": {
+              "reference": "#07356970-06f7-4fc1-b560-eb12a349376e"
+            },
+            "organization": {
+              "reference": "#769362e9-d05c-4564-86f6-d3845e9a67f1"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "DADM"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "07356970-06f7-4fc1-b560-eb12a349376e"
+          },
+          {
+            "resourceType": "Organization",
+            "id": "769362e9-d05c-4564-86f6-d3845e9a67f1",
+            "identifier": [
+              {
+                "id": "2.16.756.5.30.1.177",
+                "value": "2.16.756.5.30.1.177"
+              }
+            ]
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.6.96",
+                  "code": "71388002"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId",
+            "valueIdentifier": {
+              "value": "urn:oid:1.3.6.1.4.1.21367.2017.2.1.89"
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.177"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:2.25.287939003617881982451147268379326350084"
+          },
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:d89f08f0-add4-11ef-ab21-024264510304"
+          }
+        ],
+        "status": "current",
+        "mode": "working",
+        "code": {
+          "coding": [
+            {
+              "system": "http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+              "code": "submissionset"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/100000001"
+        },
+        "date": "2024-11-28T23:05:15+01:00",
+        "source": {
+          "reference": "#766386f2-f58d-45a9-a565-da37e1ac0fa7"
+        },
+        "entry": [
+          {
+            "item": {
+              "reference": "DocumentReference/ZDg5ZjFlMGQtYWRkNC0xMWVmLWFiMjEtMDI0MjY0NTEwMzA0QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw=="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://api-portals.cara.ch/ad-adaptor/api/r4/List/OGI0YjkwMjktMTQ4Zi00NjFlLWE0YjktNzNkMTVmMTk5ZmM3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+      "resource": {
+        "resourceType": "List",
+        "id": "OGI0YjkwMjktMTQ4Zi00NjFlLWE0YjktNzNkMTVmMTk5ZmM3QHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw==",
+        "meta": {
+          "versionId": "1",
+          "profile": [
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.List",
+            "http://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.SubmissionSet"
+          ]
+        },
+        "contained": [
+          {
+            "resourceType": "PractitionerRole",
+            "id": "a9bd4acf-7ae0-4105-b21a-98e1f6259ef8",
+            "identifier": [
+              {
+                "system": "2.16.756.5.30.1.127.3.10.3",
+                "value": "g-85ed0ff6-0b6a-4cd5-b0a7-e0b28f99cecd"
+              }
+            ],
+            "practitioner": {
+              "reference": "#9878bf88-5ec7-4956-a401-546a2922f633"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "2.16.756.5.30.1.127.3.10.6",
+                    "code": "PAT"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "resourceType": "Practitioner",
+            "id": "9878bf88-5ec7-4956-a401-546a2922f633"
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-designationType",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "2.16.840.1.113883.6.96",
+                  "code": "71388002",
+                  "display": "Procedure (procedure)"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://profiles.ihe.net/ITI/MHD/StructureDefinition/ihe-sourceId",
+            "valueIdentifier": {
+              "value": "urn:oid:1.2.276.0.76.4.15.1.1.10.7"
+            }
+          },
+          {
+            "url": "https://api.phellowseven.com/fhir/StructureDefinition/homeCommunityId",
+            "valueString": "urn:oid:2.16.756.5.30.1.177"
+          }
+        ],
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:2.25.116212252227239151641841451841601222175231240"
+          },
+          {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:8b4b9029-148f-461e-a4b9-73d15f199fc7"
+          }
+        ],
+        "status": "current",
+        "mode": "working",
+        "code": {
+          "coding": [
+            {
+              "system": "http://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes",
+              "code": "submissionset"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/100000001"
+        },
+        "date": "2026-05-29T15:12:16+02:00",
+        "source": {
+          "reference": "#a9bd4acf-7ae0-4105-b21a-98e1f6259ef8"
+        },
+        "entry": [
+          {
+            "item": {
+              "reference": "DocumentReference/YjVhYzg5ZjgtMjI1ZS00NmM0LThiMDctMmExMmMzYWQ4M2JhQHVybjpvaWQ6Mi4xNi43NTYuNS4zMC4xLjE3Nw=="
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

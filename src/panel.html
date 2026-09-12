@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cara-transfer</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-row">
+      <h1 data-i18n="app.title">cara-transfer</h1>
+      <div class="header-controls">
+        <select id="langSelect" data-i18n-title="header.language" aria-label="Language">
+          <option value="de">DE</option>
+          <option value="fr">FR</option>
+          <option value="it">IT</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="reloadBtn" class="btn" data-i18n="header.reload">Reload</button>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span id="patientName"></span>
+      <span id="communityName"></span>
+    </div>
+  </header>
+
+  <main>
+    <section id="introView" class="view" hidden>
+      <h2 data-i18n="intro.title"></h2>
+      <div class="disclaimer-text intro-text">
+        <p data-i18n="intro.p1"></p>
+        <p data-i18n="intro.p2"></p>
+        <p data-i18n="intro.p3"></p>
+        <p data-i18n="intro.p4"></p>
+        <p class="muted small" data-i18n="intro.provider"></p>
+      </div>
+      <label class="check"><input type="checkbox" id="introAck"> <span data-i18n="intro.acknowledge"></span></label>
+      <div class="actions"><button id="introAccept" class="btn btn-primary" data-i18n="intro.accept" disabled></button></div>
+    </section>
+
+    <section id="messageView" class="view" hidden>
+      <p id="messageText" class="message"></p>
+    </section>
+
+    <section id="listView" class="view" hidden>
+      <div class="toolbar">
+        <label class="check"><input type="checkbox" id="showCara"> <span id="showCaraLabel"></span></label>
+      </div>
+      <div class="toolbar toolbar-select">
+        <button id="selectAllBtn" class="btn btn-small" data-i18n="list.selectAll"></button>
+        <button id="selectNoneBtn" class="btn btn-small" data-i18n="list.selectNone"></button>
+        <span id="selectedCount" class="muted"></span>
+      </div>
+      <p id="compatBanner" class="message compat" hidden></p>
+      <p id="summaryLine" class="muted small"></p>
+      <details class="legend small"><summary data-i18n="list.legendTitle"></summary><p id="legendText" class="muted"></p></details>
+      <div id="tableContainer"></div>
+      <p id="listEmpty" class="message" hidden></p>
+      <div class="actions">
+        <button id="transferBtn" class="btn btn-primary"></button>
+        <button id="deleteBtn" class="btn btn-danger" data-i18n="action.delete"></button>
+        <button id="backupBtn" class="btn" data-i18n="action.backup"></button>
+      </div>
+      <p id="actionNote" class="muted small" hidden></p>
+    </section>
+
+    <section id="progressView" class="view" hidden>
+      <div class="progress-head">
+        <h2 data-i18n="progress.title"></h2>
+        <span id="progressStatus" class="muted"></span>
+      </div>
+      <div id="progressRows" class="progress-rows"></div>
+      <p id="progressSummary" class="message" hidden></p>
+      <div class="actions">
+        <button id="stopBtn" class="btn btn-danger" data-i18n="progress.stop"></button>
+        <button id="downloadLogBtn" class="btn" data-i18n="progress.downloadLog" hidden></button>
+        <button id="backBtn" class="btn btn-primary" data-i18n="progress.back" hidden></button>
+      </div>
+    </section>
+
+    <section id="logView" class="log">
+      <div class="progress-head">
+        <button id="toggleLogBtn" class="btn btn-small btn-link"></button>
+        <span id="logCount" class="muted small"></span>
+        <button id="clearLogBtn" class="btn btn-small" data-i18n="log.clear"></button>
+      </div>
+      <div id="logEntries" class="log-entries" hidden></div>
+    </section>
+  </main>
+
+  <footer class="footer muted small" data-i18n="footer.privacy"></footer>
+
+  <dialog id="disclaimerDialog">
+    <form method="dialog">
+      <h2 data-i18n="disclaimer.title"></h2>
+      <p id="disclaimerCount" class="muted"></p>
+      <div id="disclaimerText" class="disclaimer-text"></div>
+      <label class="check"><input type="checkbox" id="safetyCopy" checked> <span id="safetyCopyLabel"></span></label>
+      <label class="check"><input type="checkbox" id="disclaimerAck"> <span data-i18n="disclaimer.acknowledge"></span></label>
+      <div class="actions">
+        <button value="cancel" class="btn" data-i18n="disclaimer.cancel"></button>
+        <button value="confirm" id="disclaimerConfirm" class="btn btn-danger" disabled></button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="backupDialog">
+    <form method="dialog">
+      <h2 data-i18n="backup.title"></h2>
+      <p id="backupCount" class="muted"></p>
+      <p id="backupNote" class="disclaimer-text"></p>
+      <label class="check"><input type="checkbox" id="backupMeta" checked> <span data-i18n="backup.includeMetadata"></span></label>
+      <label class="check"><input type="checkbox" id="backupZip" disabled> <span data-i18n="backup.zip"></span></label>
+      <div class="actions">
+        <button value="cancel" class="btn" data-i18n="backup.cancel"></button>
+        <button value="confirm" class="btn btn-primary" data-i18n="backup.confirm"></button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="panel.js"></script>
+</body>
+</html>

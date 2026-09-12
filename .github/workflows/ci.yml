@@ -1,0 +1,63 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Unit tests
+        run: node --test test/*.test.mjs
+      - name: Install Playwright (offline end-to-end test)
+        run: |
+          npm install --no-save playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Offline end-to-end test (fake portal + fake API)
+        run: node test/e2e/fake-portal.mjs
+      - name: Verify manifest permissions are minimal
+        run: |
+          node -e '
+            const m = require("./manifest.json");
+            const perms = m.permissions.sort().join(",");
+            if (perms !== "downloads,sidePanel,storage") throw new Error("unexpected permissions: " + perms);
+            if (m.host_permissions.join(",") !== "https://patient.cara.ch/*") throw new Error("unexpected host permissions");
+            if (!/default-src .self./.test(m.content_security_policy.extension_pages)) throw new Error("CSP missing");
+            console.log("manifest ok");
+          '
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check tag matches manifest version
+        run: |
+          v=$(node -p 'require("./manifest.json").version')
+          [ "refs/tags/v$v" = "$GITHUB_REF" ] || { echo "tag $GITHUB_REF != manifest $v"; exit 1; }
+      - name: "Build zip (no build step, the zip is the repository content)"
+        run: |
+          v=$(node -p 'require("./manifest.json").version')
+          mkdir -p dist
+          zip -r "dist/cara-transfer-$v.zip" manifest.json src _locales icons LICENSE -x '*.DS_Store'
+          (cd dist && sha256sum "cara-transfer-$v.zip" > "cara-transfer-$v.zip.sha256")
+          cat dist/*.sha256
+      - name: GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.zip
+            dist/*.sha256
+          body: |
+            Built from commit ${{ github.sha }} without a build step. Verify: unzip and diff against the tagged source.

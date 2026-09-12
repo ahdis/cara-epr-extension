@@ -1,0 +1,13 @@
+{
+  "name": "cara-transfer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension: transfer, delete or back up your own EPR documents from foreign communities inside the CARA patient portal.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "zip": "node scripts/package.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

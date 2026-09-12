@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+*.log
+creds.json
+*.tmp
+dist/
+backup-*/
+.e2e-profile/
