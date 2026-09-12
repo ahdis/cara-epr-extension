@@ -437,19 +437,25 @@ function download({ blob, filename, saveAs = false }) {
         URL.revokeObjectURL(url);
         return reject(new Error(chrome.runtime.lastError?.message ?? 'download failed'));
       }
+      let settled = false;
+      const finish = (state, error) => {
+        if (settled) return;
+        settled = true;
+        chrome.downloads.onChanged.removeListener(listener);
+        URL.revokeObjectURL(url);
+        if (state === 'complete') chrome.downloads.search({ id: downloadId }, items => resolve(items?.[0]?.filename ?? filename));
+        else reject(new Error(error ?? 'download interrupted'));
+      };
       const listener = delta => {
-        if (delta.id !== downloadId) return;
-        if (delta.state?.current === 'complete') {
-          chrome.downloads.onChanged.removeListener(listener);
-          URL.revokeObjectURL(url);
-          chrome.downloads.search({ id: downloadId }, items => resolve(items?.[0]?.filename ?? filename));
-        } else if (delta.state?.current === 'interrupted') {
-          chrome.downloads.onChanged.removeListener(listener);
-          URL.revokeObjectURL(url);
-          reject(new Error(delta.error?.current ?? 'download interrupted'));
-        }
+        if (delta.id !== downloadId || !delta.state) return;
+        if (delta.state.current === 'complete' || delta.state.current === 'interrupted') finish(delta.state.current, delta.error?.current);
       };
       chrome.downloads.onChanged.addListener(listener);
+      // Small files can complete before the listener is attached; check the current state once.
+      chrome.downloads.search({ id: downloadId }, items => {
+        const it = items?.[0];
+        if (it && (it.state === 'complete' || it.state === 'interrupted')) finish(it.state, it.error);
+      });
     });
   });
 }
