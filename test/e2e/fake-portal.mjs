@@ -136,6 +136,7 @@ const userDataDir = join(root, '.e2e-profile');
 const context = await chromium.launchPersistentContext(userDataDir, {
   channel: 'chromium',
   headless: !headed,
+  viewport: shots ? { width: 1280, height: 800 } : undefined, // Chrome Web Store screenshot size
   args: [`--disable-extensions-except=${root}`, `--load-extension=${root}`],
 });
 const failures = [];
@@ -192,7 +193,7 @@ try {
   check((await panel.$$('#tableContainer tbody tr')).length === 22, 'toggle shows CARA documents too');
   check((await panel.$$('#tableContainer .group')).length === 2, 'CARA group added');
   await panel.uncheck('#showCara');
-  if (shots) await panel.screenshot({ path: join(shots, '1-list-de.png'), fullPage: true });
+  if (shots) { await panel.screenshot({ path: join(shots, '1-list-de.png'), fullPage: true }); await panel.screenshot({ path: join(shots, 'store-1-list.png') }); }
   const refreshedToken = await portal.evaluate(() => localStorage.getItem('phellow:oauth2:refreshToken'));
   check(refreshedToken.includes(b64url({ typ: 'refresh', iat: now(), exp: now() + 300, n: 1 }).slice(0, 10)) || tokenRefreshes >= 1, `token refreshed and written back (${tokenRefreshes} refresh, ${exchanges} exchange)`);
 
@@ -208,14 +209,14 @@ try {
   check(await panel.isChecked('#safetyCopy') && (await panel.textContent('#safetyCopyLabel')).includes('cara-backup'), 'safety copy on by default');
   await panel.check('#disclaimerAck');
   check(!(await panel.isDisabled('#disclaimerConfirm')), 'confirm enabled after acknowledgement');
-  if (shots) await panel.screenshot({ path: join(shots, '2-disclaimer.png') });
+  if (shots) await panel.screenshot({ path: join(shots, 'store-2-disclaimer.png') });
   await panel.click('#disclaimerConfirm');
   await panel.waitForSelector('#backBtn:not([hidden])', { timeout: 30000 });
   const stepTexts = await panel.$$eval('.prow-steps .step', s => s.map(x => x.className.replace('step ', '') + '|' + x.textContent));
   check(stepTexts.filter(s => s.startsWith('step-ok')).length === 6, `all six steps ok (incl. safety copy): ${stepTexts.join(', ')}`);
   check(uploads === 1 && deletions === 1, `one upload and one deletion request sent (${uploads}/${deletions})`);
   check(!(await panel.textContent('#progressSummary')).includes('fehlgeschlagen: 1') && (await panel.textContent('#progressSummary')).includes('1 erfolgreich'), 'summary reports success');
-  if (shots) await panel.screenshot({ path: join(shots, '3-progress.png'), fullPage: true });
+  if (shots) { await panel.screenshot({ path: join(shots, '3-progress.png'), fullPage: true }); await panel.screenshot({ path: join(shots, 'store-3-progress.png') }); }
   await panel.click('#backBtn');
   await panel.waitForSelector('#listView:not([hidden]) table');
   check(!(await panel.textContent('#tableContainer')).includes('Covid_vaccination_certificate'), 'original gone from the foreign list after reload');
