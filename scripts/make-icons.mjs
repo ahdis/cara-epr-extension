@@ -32,8 +32,10 @@ function png(size, pixel) {
   ihdr.writeUInt32BE(size, 0); ihdr.writeUInt32BE(size, 4); ihdr[8] = 8; ihdr[9] = 6; ihdr[10] = 0; ihdr[11] = 0; ihdr[12] = 0;
   return Buffer.concat([Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]), chunk('IHDR', ihdr), chunk('IDAT', deflateSync(raw)), chunk('IEND', Buffer.alloc(0))]);
 }
-function draw(size) {
-  const s = size;
+// Chrome Web Store guideline: the 128 px icon carries a 96 px artwork centred with 16 px transparent padding.
+function draw(size, pad = 0) {
+  const canvas = size;
+  const s = size - 2 * pad;
   const radius = s * 0.22;
   const inRounded = (x, y) => {
     const cx = Math.min(Math.max(x, radius), s - radius), cy = Math.min(Math.max(y, radius), s - radius);
@@ -46,7 +48,9 @@ function draw(size) {
     if (u >= 0.5 && u <= 0.84) { const h = (0.84 - u) / 0.34 * 0.3; return Math.abs(v - 0.5) <= h; }
     return false;
   };
-  return png(s, (x, y) => {
+  return png(canvas, (cx, cy) => {
+    const x = cx - pad, y = cy - pad;
+    if (x < 0 || y < 0 || x >= s || y >= s) return [0, 0, 0, 0];
     let inside = 0, arrow = 0;
     for (const dx of [0.25, 0.75]) for (const dy of [0.25, 0.75]) { if (inRounded(x + dx, y + dy)) inside++; if (inArrow(x + dx, y + dy)) arrow++; }
     if (!inside) return [0, 0, 0, 0];
@@ -57,5 +61,8 @@ function draw(size) {
   });
 }
 mkdirSync('icons', { recursive: true });
-for (const s of [16, 48, 128]) writeFileSync(`icons/icon${s}.png`, draw(s));
+for (const s of [16, 48]) writeFileSync(`icons/icon${s}.png`, draw(s));
+writeFileSync('icons/icon128.png', draw(128, 16));
+mkdirSync('store', { recursive: true });
+writeFileSync('store/icon-128.png', draw(128, 16));
 console.log('icons written');
