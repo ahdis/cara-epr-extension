@@ -46,6 +46,34 @@ Datenschutz: Die Erweiterung kommuniziert ausschliesslich mit dem CARA-Backend (
 
 Wichtig: cara-transfer ist ein unabhängiges Werkzeug der ahdis ag. Es wird nicht von CARA, phellow seven oder eHealth Suisse bereitgestellt, ist nicht mit ihnen verbunden und nicht von ihnen freigegeben. Es nutzt interne Schnittstellen des Portals, die keine öffentliche oder garantierte API sind, und kann bei Änderungen am Portal jederzeit aufhören zu funktionieren. Übertragungen und Löschungen sind in der ursprünglichen Gemeinschaft unwiderruflich. Die Software wird «wie besehen» ohne jegliche Gewährleistung bereitgestellt; die Nutzung erfolgt auf eigenes Risiko, bewahren Sie eigene Sicherungen auf.
 
+**Description (fr):**
+
+cara-transfer ajoute un panneau latéral au portail patient CARA (patient.cara.ch). Pendant que vous êtes connecté·e, il liste vos documents du dossier électronique du patient (DEP) qui se trouvent encore dans une autre communauté, par exemple une communauté qui cesse son activité, et vous permet de
+
+- les transférer dans CARA : le document est récupéré, son empreinte (hash) vérifiée, téléversé dans CARA comme nouveau document soumis par vous, vérifié octet par octet dans CARA, enregistré localement comme copie de sécurité, et seulement ensuite supprimé dans l'autre communauté ;
+- supprimer des documents dans l'autre communauté sans les copier (par exemple d'anciennes versions) ;
+- sauvegarder n'importe quel document, y compris ceux de CARA, sur votre ordinateur sous forme de fichier accompagné d'un JSON de métadonnées.
+
+Les documents dont le contenu existe déjà dans CARA sont reconnus par leur empreinte et ne sont jamais téléversés deux fois. Tout s'exécute séquentiellement, avec une vue de progression, un journal local et un bouton d'arrêt. Chaque action irréversible exige une confirmation explicite dans la même exécution. Seuls les documents PDF et FHIR JSON sont transférés ; tout peut être sauvegardé.
+
+Protection des données : l'extension communique uniquement avec le backend CARA (api-portals.cara.ch), depuis la page du portail. Pas de télémétrie, pas d'analyse, pas de script tiers, pas de configuration à distance. Les jetons de session restent dans votre navigateur et ne sont jamais stockés par l'extension. Le code source est publié sous licence Apache-2.0.
+
+Important : cara-transfer est un outil indépendant d'ahdis ag. Il n'est ni fourni, ni affilié, ni approuvé par CARA, phellow seven ou eHealth Suisse. Il utilise des interfaces internes du portail qui ne sont pas une API publique ou garantie et peut cesser de fonctionner lorsque le portail change. Les transferts et suppressions sont irréversibles dans la communauté d'origine. Le logiciel est fourni « tel quel », sans aucune garantie ; utilisez-le à vos propres risques et conservez vos propres sauvegardes.
+
+**Description (it):**
+
+cara-transfer aggiunge un pannello laterale al portale pazienti CARA (patient.cara.ch). Mentre è collegato/a, elenca i documenti della sua cartella informatizzata del paziente (CIP) che si trovano ancora in un'altra comunità, per esempio una comunità che cessa l'attività, e le permette di
+
+- trasferirli in CARA: il documento viene recuperato, il suo hash verificato, caricato in CARA come nuovo documento inviato da lei, verificato byte per byte in CARA, salvato localmente come copia di sicurezza e solo dopo eliminato nell'altra comunità;
+- eliminare documenti nell'altra comunità senza copiarli (per esempio versioni precedenti);
+- salvare qualsiasi documento, compresi quelli di CARA, sul suo computer come file più un JSON dei metadati.
+
+I documenti il cui contenuto esiste già in CARA vengono riconosciuti dall'hash e non vengono mai caricati due volte. Tutto viene eseguito in sequenza, con una vista di avanzamento, un registro locale e un pulsante di arresto. Ogni azione irreversibile richiede una conferma esplicita nella stessa esecuzione. Vengono trasferiti solo documenti PDF e FHIR JSON; tutto può essere salvato.
+
+Protezione dei dati: l'estensione comunica esclusivamente con il backend CARA (api-portals.cara.ch), dalla pagina del portale. Nessuna telemetria, nessuna analisi, nessuno script di terzi, nessuna configurazione remota. I token di sessione restano nel suo browser e non vengono mai memorizzati dall'estensione. Il codice sorgente è pubblicato con licenza Apache-2.0.
+
+Importante: cara-transfer è uno strumento indipendente di ahdis ag. Non è fornito, affiliato o approvato da CARA, phellow seven o eHealth Suisse. Utilizza interfacce interne del portale che non sono un'API pubblica o garantita e può smettere di funzionare quando il portale cambia. Trasferimenti ed eliminazioni sono irreversibili nella comunità di origine. Il software è fornito «così com'è», senza alcuna garanzia; l'uso è a proprio rischio, conservi le proprie copie di sicurezza.
+
 **Category:** Productivity → Tools (or "Health" if offered in your dashboard)
 
 **Language:** German (default), plus English, French, Italian
