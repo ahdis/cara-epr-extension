@@ -17,7 +17,7 @@ Status of the groundwork (2026-09-12): every API call used below has been execut
 | OAuth/OIDC broker ("phidy") | `https://api-portals.cara.ch/tenant/<tenant>/openid-connect/{auth,token,logout}` and `…/tenant/<tenant>/session` |
 | FHIR R4 MHD facade ("ad-adaptor") | `https://api-portals.cara.ch/ad-adaptor/api/r4/` |
 | Portal services ("epd-adaptor") | `https://api-portals.cara.ch/epd-adaptor/api/v1/…` (only `Conversion` is relevant here) |
-| OAuth client id | `emedo-pr-web` (public client, no secret, no PKCE) |
+| OAuth client id | `pat-portal` (public client, no secret, no PKCE; was `emedo-pr-web` before the portal's Vite release in 2026-10). Read `VITE_OAUTH2_CLIENT_ID` at runtime. |
 | Tenants (one per identity provider) | `realm-pat-swissid`, `realm-pat-trustid`, `realm-pat-vaudid`, `realm-pat-geneveid`. The active one is in `localStorage['phellow:state:selectedIdP']` (`SwissID`, `TrustID`, `VaudID`, `GeneveID`) → tenant = `realm-pat-` + lowercase name. |
 | CARA home community OID | `2.16.756.5.30.1.177` (`urn:oid:2.16.756.5.30.1.177`) |
 | CARA repository OID | `2.16.756.5.30.1.177.2.2.2.1.2` |
@@ -25,7 +25,7 @@ Status of the groundwork (2026-09-12): every API call used below has been execut
 | Role code system | `2.16.756.5.30.1.127.3.10.6` (codes `PAT`, `HCP`, `REP`, `ASS`, `DADM`, `PADM`) |
 | EPR-SPID assigning authority | `2.16.756.5.30.1.127.3.10.3` |
 
-The portal's runtime config is embedded in `index.html` as a `data-content` JSON attribute (`VUE_APP_*` keys); the values above come from it. Read `VUE_APP_HOME_COMMUNITY_ID` at runtime instead of hard-coding, with `2.16.756.5.30.1.177` as fallback.
+The portal's runtime config is embedded in `index.html` as a `data-content` JSON attribute (`VITE_*` keys since 2026-10, `VUE_APP_*` before); the values above come from it. Read `VUE_APP_HOME_COMMUNITY_ID` at runtime instead of hard-coding, with `2.16.756.5.30.1.177` as fallback.
 
 ### 1.2 Why documents sit in a foreign community
 
@@ -57,11 +57,11 @@ The XUA token used for FHIR calls is **not** stored; the SPA keeps it in memory 
 
 ```
 POST https://api-portals.cara.ch/tenant/<tenant>/openid-connect/token
-grant_type=refresh_token&client_id=emedo-pr-web&redirect_uri=https%3A%2F%2Fpatient.cara.ch%2Flogin&refresh_token=<refreshToken>
+grant_type=refresh_token&client_id=pat-portal&redirect_uri=https%3A%2F%2Fpatient.cara.ch%2Flogin&refresh_token=<refreshToken>
 → { access_token, refresh_token (new), id_token, token_type:"Bearer", expires_in≈300 }
 
 POST https://api-portals.cara.ch/tenant/<tenant>/openid-connect/token
-client_id=emedo-pr-web
+client_id=pat-portal
 &grant_type=urn:ietf:params:oauth:grant-type:token-exchange
 &subject_token=<access_token from step 1>
 &subject_token_type=urn:ietf:params:oauth:token-type:access_token

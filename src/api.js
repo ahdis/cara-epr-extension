@@ -4,7 +4,7 @@
 
 export const DEFAULTS = Object.freeze({
   apiBase: 'https://api-portals.cara.ch',
-  clientId: 'emedo-pr-web',
+  clientId: 'pat-portal', // was 'emedo-pr-web' until the portal's Vite release (2026-10); the portal config wins
   redirectUri: 'https://patient.cara.ch/login',
   homeCommunityId: 'urn:oid:2.16.756.5.30.1.177',
   homeCommunityName: 'CARA',
@@ -272,7 +272,7 @@ export async function exchangeXuaToken({ tenant, accessToken, spid, homeCommunit
  * @param {() => Promise<{refreshToken:string, idToken?:string}>} o.readTokens  read the portal's current tokens (newest refresh token)
  * @param {(t:{accessToken,refreshToken,idToken,expiresAt}) => Promise<void>} o.writeTokens  write rotated tokens back to the portal
  */
-export function createSession({ tenant, readTokens, writeTokens, homeCommunityId = DEFAULTS.homeCommunityId, apiBase = DEFAULTS.apiBase, minRemainingMs = 30_000, now = () => Date.now() }) {
+export function createSession({ tenant, readTokens, writeTokens, homeCommunityId = DEFAULTS.homeCommunityId, apiBase = DEFAULTS.apiBase, clientId = DEFAULTS.clientId, redirectUri = DEFAULTS.redirectUri, minRemainingMs = 30_000, now = () => Date.now() }) {
   let xua = null; // { token, expMs }
   let author = null; // { given, family, spid }
   let pending = null;
@@ -280,7 +280,7 @@ export function createSession({ tenant, readTokens, writeTokens, homeCommunityId
   async function refreshAndExchange() {
     const { refreshToken, idToken } = await readTokens();
     if (!refreshToken) throw new ApiError('not logged in (no refresh token)', { status: 401, step: 'token refresh' });
-    const idp = await refreshIdpToken({ tenant, refreshToken, apiBase });
+    const idp = await refreshIdpToken({ tenant, refreshToken, apiBase, clientId, redirectUri });
     const claims = decodeJwt(idp.id_token) ?? decodeJwt(idToken) ?? {};
     const expiresAt = new Date(now() + (idp.expires_in ?? 300) * 1000).toISOString();
     if (writeTokens) {
@@ -288,7 +288,7 @@ export function createSession({ tenant, readTokens, writeTokens, homeCommunityId
     }
     author = { given: claims.given_name ?? '', family: claims.family_name ?? '', spid: claims.spid ?? null };
     if (!author.spid) throw new ApiError('id_token has no spid claim', { status: 401, step: 'token exchange' });
-    const x = await exchangeXuaToken({ tenant, accessToken: idp.access_token, spid: author.spid, homeCommunityId, apiBase });
+    const x = await exchangeXuaToken({ tenant, accessToken: idp.access_token, spid: author.spid, homeCommunityId, apiBase, clientId });
     const c = decodeJwt(x.access_token);
     const expMs = c?.exp ? c.exp * 1000 : now() + (x.expires_in ?? 300) * 1000;
     xua = { token: x.access_token, expMs };

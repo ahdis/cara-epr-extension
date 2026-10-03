@@ -12,7 +12,7 @@
 
 const TOKEN_URL = 'https://api-portals.cara.ch/tenant/realm-pat-swissid/openid-connect/token';
 const FHIR = 'https://api-portals.cara.ch/ad-adaptor/api/r4';
-const CLIENT_ID = 'emedo-pr-web';
+const CLIENT_ID = 'pat-portal';
 const HOME_COMMUNITY = 'urn:oid:2.16.756.5.30.1.177';
 
 const args = process.argv.slice(2);

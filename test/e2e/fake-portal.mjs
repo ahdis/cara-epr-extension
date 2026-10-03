@@ -61,6 +61,8 @@ async function fakeApi(route) {
   requests.push({ method, url });
   if (url.includes('/openid-connect/token')) {
     const body = new URLSearchParams(req.postData() ?? '');
+    // the real broker answers an unknown client with 401 invalid_client (seen after the portal's Vite release)
+    if (body.get('client_id') !== 'pat-portal') return route.fulfill({ status: 401, json: { error: 'invalid_client' } });
     if (body.get('grant_type') === 'refresh_token') {
       tokenRefreshes++;
       if (!body.get('refresh_token')?.startsWith('eyJ')) return route.fulfill({ status: 400, body: 'bad refresh token' });
@@ -129,7 +131,7 @@ function parseMultipart(buf, boundary) {
 }
 
 const portalHtml = `<!doctype html><html><head><meta charset="utf-8"><title>fake CARA portal</title></head>
-<body><div id="app" data-content='${JSON.stringify({ VUE_APP_HOME_COMMUNITY_ID: '2.16.756.5.30.1.177', VUE_APP_HOME_COMMUNITY_NAME: 'CARA', VUE_APP_API_PHIDY: 'https://api-portals.cara.ch', VUE_APP_API_APHINITY: 'https://api-portals.cara.ch/ad-adaptor/api/' })}'>fake portal</div></body></html>`;
+<body><div id="app" data-content='${JSON.stringify({ VITE_HOME_COMMUNITY_ID: '2.16.756.5.30.1.177', VITE_HOME_COMMUNITY_NAME: 'CARA', VITE_API_PHIDY: 'https://api-portals.cara.ch', VITE_OAUTH2_CLIENT_ID: 'pat-portal', VITE_API_APHINITY: 'https://api-portals.cara.ch/ad-adaptor/api/' })}'>fake portal</div></body></html>`;
 
 // --- run ----------------------------------------------------------------------------------------
 const userDataDir = join(root, '.e2e-profile');

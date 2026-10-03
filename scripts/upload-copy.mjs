@@ -4,9 +4,9 @@ const TOKEN_URL='https://api-portals.cara.ch/tenant/realm-pat-swissid/openid-con
 const X='urn:oid:2.16.756.5.30.1.194.3.0', CARA='urn:oid:2.16.756.5.30.1.177';
 const claims=t=>JSON.parse(Buffer.from(t.split('.')[1].replace(/-/g,'+').replace(/_/g,'/'),'base64').toString());
 const post=async p=>{const r=await fetch(TOKEN_URL,{method:'POST',body:new URLSearchParams(p)});if(!r.ok)throw new Error(r.status+' '+(await r.text()).slice(0,100));return r.json();};
-const idp=await post({grant_type:'refresh_token',client_id:'emedo-pr-web',redirect_uri:'https://patient.cara.ch/login',refresh_token:process.env.EPR_REFRESH_TOKEN});
+const idp=await post({grant_type:'refresh_token',client_id:'pat-portal',redirect_uri:'https://patient.cara.ch/login',refresh_token:process.env.EPR_REFRESH_TOKEN});
 const spid=claims(idp.id_token).spid, name=claims(idp.id_token);
-const xua=await post({client_id:'emedo-pr-web',grant_type:'urn:ietf:params:oauth:grant-type:token-exchange',subject_token:idp.access_token,subject_token_type:'urn:ietf:params:oauth:token-type:access_token',home_community_id:CARA,purpose_of_use:'NORM',role:'PAT',resource_id:spid});
+const xua=await post({client_id:'pat-portal',grant_type:'urn:ietf:params:oauth:grant-type:token-exchange',subject_token:idp.access_token,subject_token_type:'urn:ietf:params:oauth:token-type:access_token',home_community_id:CARA,purpose_of_use:'NORM',role:'PAT',resource_id:spid});
 const H={authorization:'Bearer '+xua.access_token};
 const hc=d=>d.extension?.find(x=>x.url.endsWith('/homeCommunityId'))?.valueString;
 

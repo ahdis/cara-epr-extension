@@ -138,6 +138,8 @@ async function boot() {
     apiBase,
     fhir: cfg.apiAphinity ? cfg.apiAphinity.replace(/\/+$/, '') + '/r4' : fhirBase(apiBase),
     tenant: cfg.tenant ?? tenantForIdp(p.selectedIdP),
+    clientId: cfg.clientId ?? DEFAULTS.clientId,
+    redirectUri: cfg.redirectUri ?? DEFAULTS.redirectUri,
   };
   const idClaims = decodeJwt(p.idToken) ?? {};
   state.author = { given: idClaims.given_name ?? '', family: idClaims.family_name ?? '' };
@@ -148,6 +150,8 @@ async function boot() {
     tenant: state.config.tenant,
     apiBase: state.config.apiBase,
     homeCommunityId: state.config.homeCommunityId,
+    clientId: state.config.clientId,
+    redirectUri: state.config.redirectUri,
     readTokens: async () => {
       const s = await readPortalState(state.tabId);
       return { refreshToken: s?.refreshToken, idToken: s?.idToken };

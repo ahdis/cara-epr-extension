@@ -24,10 +24,13 @@
     return null;
   }
 
-  // The user-facing community name ("CARA") lives in VUE_APP_I18N_OVERRIDE[<lang>].community.name; VUE_APP_HOME_COMMUNITY_NAME is the internal name ("emedo").
+  // The portal moved from Vue CLI (VUE_APP_* keys) to Vite (VITE_* keys) in 2026-10; both are read, VITE_ first.
+  const PREFIXES = ['VITE_', 'VUE_APP_'];
+
+  // The user-facing community name ("CARA") lives in VITE_I18N_OVERRIDE[<lang>].community.name; VITE_HOME_COMMUNITY_NAME is the internal name ("emedo").
   function communityDisplayName(cfg) {
     try {
-      const o = JSON.parse(cfg.VUE_APP_I18N_OVERRIDE ?? '{}');
+      const o = JSON.parse(cfg.VITE_I18N_OVERRIDE ?? cfg.VUE_APP_I18N_OVERRIDE ?? '{}');
       for (const k of Object.keys(o)) { const n = o[k]?.community?.name; if (n) return String(n); }
     } catch { /* ignore */ }
     return null;
@@ -36,7 +39,7 @@
   function getState() {
     const ls = k => { try { return localStorage.getItem(k); } catch { return null; } };
     const cfg = readConfig() ?? {};
-    const pickCfg = (...names) => { for (const n of names) if (cfg[n] != null && cfg[n] !== '') return String(cfg[n]); return null; };
+    const pickCfg = (...names) => { for (const n of names) for (const p of PREFIXES) if (cfg[p + n] != null && cfg[p + n] !== '') return String(cfg[p + n]); return null; };
     return {
       refreshToken: ls(KEYS.refreshToken),
       idToken: ls(KEYS.idToken),
@@ -47,13 +50,14 @@
       role: ls(KEYS.role),
       navigatorLanguage: navigator.language,
       config: {
-        homeCommunityId: pickCfg('VUE_APP_HOME_COMMUNITY_ID'),
-        homeCommunityName: communityDisplayName(cfg) ?? pickCfg('VUE_APP_HOME_COMMUNITY_NAME'),
-        tenant: pickCfg('VUE_APP_OAUTH2_' + String(ls(KEYS.selectedIdP) ?? '').toUpperCase() + '_TENANT'),
-        apiPhidy: pickCfg('VUE_APP_API_PHIDY'),
-        apiAphinity: pickCfg('VUE_APP_API_APHINITY'),
-        clientId: pickCfg('VUE_APP_OAUTH_CLIENT_ID', 'VUE_APP_CLIENT_ID'),
-        documentMaxSize: pickCfg('VUE_APP_DOCUMENT_MAX_SIZE'),
+        homeCommunityId: pickCfg('HOME_COMMUNITY_ID'),
+        homeCommunityName: communityDisplayName(cfg) ?? pickCfg('HOME_COMMUNITY_NAME'),
+        tenant: pickCfg('OAUTH2_' + String(ls(KEYS.selectedIdP) ?? '').toUpperCase() + '_TENANT'),
+        apiPhidy: pickCfg('API_PHIDY'),
+        apiAphinity: pickCfg('API_APHINITY'),
+        clientId: pickCfg('OAUTH2_CLIENT_ID', 'OAUTH_CLIENT_ID', 'CLIENT_ID'),
+        redirectUri: pickCfg('OAUTH2_REDIRECT_URI'),
+        documentMaxSize: pickCfg('DOCUMENT_MAX_SIZE'),
         configFound: Object.keys(cfg).length > 0,
       },
       url: location.href,
