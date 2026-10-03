@@ -61,3 +61,52 @@ jobs:
             dist/*.sha256
           body: |
             Built from commit ${{ github.sha }} without a build step. Verify: unzip and diff against the tagged source.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: package
+          path: dist/*.zip
+
+  # Uploads the release zip to the Chrome Web Store as a draft. It never calls :publish, so the
+  # submission for review stays a manual click in the developer dashboard. Authenticates as
+  # cws-publisher@ahdis-ch via Workload Identity Federation (pool cws-release, which only accepts
+  # v* tags of ahdis/cara-epr-extension); no key file. Skipped while the repo variables are unset.
+  webstore:
+    if: startsWith(github.ref, 'refs/tags/v') && vars.CWS_EXTENSION_ID != ''
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: package
+          path: dist
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/chromewebstore
+          create_credentials_file: false
+      - name: Upload to the Chrome Web Store (draft, not submitted)
+        env:
+          TOKEN: ${{ steps.auth.outputs.access_token }}
+          ITEM: publishers/${{ vars.CWS_PUBLISHER_ID }}/items/${{ vars.CWS_EXTENSION_ID }}
+        run: |
+          v="${GITHUB_REF_NAME#v}"
+          api=https://chromewebstore.googleapis.com
+          r=$(curl -sS --fail-with-body -X POST -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/zip" \
+            --data-binary "@dist/cara-transfer-$v.zip" "$api/upload/v2/$ITEM:upload?uploadType=media")
+          echo "$r"
+          state=$(jq -r .uploadState <<<"$r")
+          for i in $(seq 1 30); do
+            [ "$state" = IN_PROGRESS ] || break
+            sleep 10
+            r=$(curl -sS --fail-with-body -H "Authorization: Bearer $TOKEN" "$api/v2/$ITEM:fetchStatus")
+            state=$(jq -r .lastAsyncUploadState <<<"$r")
+            echo "upload state: $state"
+          done
+          [ "$state" = SUCCEEDED ] || { echo "upload not successful: $state"; exit 1; }
+          echo "cara-transfer $v uploaded as draft; submit it for review in the developer dashboard."

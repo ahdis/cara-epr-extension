@@ -37,7 +37,7 @@ To audit the network behaviour yourself: `grep -rn "fetch(" src/` shows exactly 
 
 - Trial phase: publish on the Chrome Web Store with visibility **Private** and a trusted-tester list (Google accounts), or **Unlisted** (install by link). Side-loading unpacked builds is for developers only.
 - Store listing must link the privacy policy ([PRIVACY.md](PRIVACY.md)), the source and the release commit.
-- Releases: tag `vX.Y.Z` matching `manifest.json`; the CI builds `dist/cara-transfer-X.Y.Z.zip` with a SHA-256 file and attaches both to a GitHub release.
+- Releases: tag `vX.Y.Z` matching `manifest.json`; the CI builds `dist/cara-transfer-X.Y.Z.zip` with a SHA-256 file and attaches both to a GitHub release. The `webstore` job then uploads the same zip to the Chrome Web Store as a draft (service account `cws-publisher@ahdis-ch` via Workload Identity Federation, repo variables `GCP_WIF_PROVIDER`, `GCP_SERVICE_ACCOUNT`, `CWS_PUBLISHER_ID`, `CWS_EXTENSION_ID`). Submitting for review stays a manual step in the developer dashboard.
 - Open with the operator before wide release: the extension reuses the portal's OAuth client id; the clean path is an mHealth client registration with CARA.
 
 ## Development
