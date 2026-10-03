@@ -37,8 +37,31 @@ To audit the network behaviour yourself: `grep -rn "fetch(" src/` shows exactly 
 
 - Trial phase: publish on the Chrome Web Store with visibility **Private** and a trusted-tester list (Google accounts), or **Unlisted** (install by link). Side-loading unpacked builds is for developers only.
 - Store listing must link the privacy policy ([PRIVACY.md](PRIVACY.md)), the source and the release commit.
-- Releases: tag `vX.Y.Z` matching `manifest.json`; the CI builds `dist/cara-transfer-X.Y.Z.zip` with a SHA-256 file and attaches both to a GitHub release. The `webstore` job then uploads the same zip to the Chrome Web Store as a draft (service account `cws-publisher@ahdis-ch` via Workload Identity Federation, repo variables `GCP_WIF_PROVIDER`, `GCP_SERVICE_ACCOUNT`, `CWS_PUBLISHER_ID`, `CWS_EXTENSION_ID`). Submitting for review stays a manual step in the developer dashboard.
+- Releases: see [Releasing](#releasing).
 - Open with the operator before wide release: the extension reuses the portal's OAuth client id; the clean path is an mHealth client registration with CARA.
+
+## Releasing
+
+Releases are cut from [ahdis/cara-epr-extension](https://github.com/ahdis/cara-epr-extension); the Chrome Web Store item is `dhiomoifdnnmbgcdeplmkcfmlopkmcli`.
+
+1. Bump `version` in `manifest.json` and `package.json` (same value), run `npm test`, commit.
+2. Push `main`, then tag and push the tag to the ahdis remote: `git tag -a vX.Y.Z -m "…" && git push ahdis vX.Y.Z`.
+3. CI ([ci.yml](.github/workflows/ci.yml)) runs the tests, checks that the tag matches the manifest, builds `cara-transfer-X.Y.Z.zip` with a SHA-256 file and attaches both to a GitHub release.
+4. The `webstore` job uploads the same zip to the Chrome Web Store as a **draft**. It never submits.
+5. In the [developer dashboard](https://chrome.google.com/webstore/devconsole) (publisher ahdis), open cara-transfer, check the new version under Package and click **Submit for review**. Manual on purpose while the extension is in its test phase.
+
+Manual fallback (CI upload failed or not configured): download the zip from the GitHub release, then dashboard → cara-transfer → Package → Upload new package → Submit for review.
+
+### One-time setup (done 2026-10-03)
+
+The `webstore` job authenticates without a key file, via Workload Identity Federation:
+
+- Google Cloud project `ahdis-ch` (number `1022310475153`): Chrome Web Store API enabled; service account `cws-publisher@ahdis-ch.iam.gserviceaccount.com` with no project roles.
+- Dedicated workload identity pool `cws-release` with provider `github`, condition `assertion.repository=='ahdis/cara-epr-extension' && assertion.ref.startsWith('refs/tags/v')`, so only release tags of this repo get a token. The repo principal set has `roles/iam.workloadIdentityUser` and `roles/iam.serviceAccountTokenCreator` on the service account. Do not reuse `github-wif-pool` / `github@ahdis-ch`: they are shared with other repos.
+- Developer dashboard → Account (Konto): the service account email is registered for the ahdis publisher (`26bbe83b-edca-4b5b-9913-0d279f5b7d53`). Only one service account per publisher.
+- Repository variables on ahdis/cara-epr-extension: `GCP_WIF_PROVIDER`, `GCP_SERVICE_ACCOUNT`, `CWS_PUBLISHER_ID`, `CWS_EXTENSION_ID`. The job is skipped while `CWS_EXTENSION_ID` is unset.
+
+If the job fails with HTTP 403, the service account is not (or no longer) registered under Account in the dashboard.
 
 ## Development
 
